@@ -1,0 +1,889 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Header & Navigation */
+header {
+    background: #05244c;
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+header h1 {
+    margin-bottom: 1rem;
+}
+
+header nav {
+    display: flex;
+    justify-content: center;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Hero Section */
+#hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem;
+    background: #0056a3;
+    color: #fff;
+}
+
+.hero-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.hero-text {
+    max-width: 50%;
+    text-align: center;
+    padding: 1rem;
+    /* Added padding for better spacing */
+}
+
+.hero-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    padding: 1rem;
+    /* Padding around the image */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Features Section */
+#features {
+    padding: 2rem;
+    background: #f9f9f9;
+    text-align: left;
+    /* Align text */
+    max-width: 1200px;
+    /* Limit the width of the entire section */
+    margin: 0 auto;
+    /* Center the section horizontally */
+}
+
+/* Features Section Title (h2) */
+#features h2 {
+    text-align: center;
+    /* Center align the heading */
+    text-transform: uppercase;
+    /* Make text uppercase */
+    font-size: 2rem;
+    /* Increase base size */
+    margin-bottom: 2rem;
+    /* Add spacing below */
+    color: #0056a3;
+    /* Default color */
+    transition: color 0.3s, transform 0.3s;
+    /* Smooth hover transition */
+}
+
+
+
+#features h2:hover {
+    color: #05244c;
+    /* Change color on hover */
+    transform: scale(1.1);
+    /* Slightly increase size on hover */
+}
+
+
+.feature {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Center align content within the feature */
+    gap: 2rem;
+    /* Space between text and image */
+    margin: 2rem 0;
+}
+
+.feature:nth-child(even) {
+    flex-direction: row-reverse;
+    /* Alternate layout */
+}
+
+.feature img {
+    max-width: 30%;
+    /* Reduce image size further */
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    /* Hover effect */
+}
+
+.feature img:hover {
+    transform: scale(1.05);
+    /* Slightly enlarge the image */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+    /* Add shadow on hover */
+}
+
+.feature-text {
+    flex: 1;
+    /* Ensure text fills available space */
+}
+
+/* Specific Styling for Feature Section H2 */
+.feature h2 {
+    font-size: 1.5rem;
+    /* Match a typical H3 font size */
+    font-weight: 600;
+    /* Bold for emphasis */
+    color: #05244c;
+    /* Use a consistent color theme */
+    margin-bottom: 1rem;
+    /* Add space below */
+    line-height: 1.6;
+    /* Increase line height for readability */
+    text-transform: none;
+    /* Remove uppercase styling */
+    text-align: left;
+    /* Align text to the left */
+    transition: color 0.3s ease, transform 0.3s ease;
+    /* Add hover effect */
+}
+
+.feature h2:hover {
+    color: #0056a3;
+    /* Slight color change on hover */
+    transform: scale(1.05);
+    /* Slight scaling effect on hover */
+}
+
+
+/* General Button Styling */
+.btn {
+    display: inline-block;
+    background-color: #ff7f50;
+    /* Coral color for a bright CTA */
+    color: white;
+    padding: 0.8rem 1.5rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s, transform 0.2s;
+    /* Smooth hover and click animations */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    /* Add subtle shadow */
+}
+
+/* Hover Effect */
+.btn:hover {
+    background-color: #e76f42;
+    /* Slightly darker shade for hover */
+    transform: translateY(-2px);
+    /* Subtle lift effect */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+    /* More prominent shadow */
+}
+
+/* Active (Click) Effect */
+.btn:active {
+    transform: translateY(1px);
+    /* Pressed down effect */
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+    /* Reduced shadow */
+}
+
+/* About Us Heading Section */
+
+/* About Us Section Styling */
+#about {
+    padding: 2rem;
+    background: #f9f9f9;
+    max-width: 1200px;
+    /* Center the section within a defined width */
+    margin: 0 auto;
+    /* Center align the section */
+    text-align: center;
+}
+
+#about h2 {
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    color: #05244c;
+    margin-bottom: 2rem;
+}
+
+#about .feature {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Center items horizontally */
+    gap: 2rem;
+    /* Add space between text and images */
+    margin: 2rem 0;
+    flex-wrap: wrap;
+    /* Stack items vertically on smaller screens */
+}
+
+#about .feature img {
+    max-width: 33%;
+    /* Restrict image width for balance */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    /* Subtle shadow for better visuals */
+}
+
+#about .feature-text {
+    max-width: 45%;
+    /* Match image width for a balanced layout */
+    text-align: left;
+    /* Align text to the left for readability */
+}
+
+
+#about-heading {
+    background-color: #f0f8ff;
+    /* Light blue background */
+    text-align: center;
+    padding: 3rem 0;
+}
+
+#about-heading h2 {
+    font-size: 3.5rem;
+    /* Much larger font size */
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #05244c;
+    /* Navy color */
+    margin: 0;
+}
+
+/* Product List Section */
+#product-list {
+    padding: 2rem;
+    text-align: center;
+}
+
+#product-list h2 {
+    font-size: 1.2rem;
+    color: #05244c;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/* Product Container */
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+/* Product Card */
+.product-card {
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    padding: 1rem;
+    text-align: center;
+}
+
+.product-card img {
+    width: 100%;
+    height: 200px;
+    /* Enforce a fixed height */
+    object-fit: cover;
+    /* Ensures the image scales proportionally and crops if necessary */
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.product-card h3 {
+    font-size: 1.5rem;
+    color: #05244c;
+    margin-bottom: 1rem;
+}
+
+.product-card p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+.add-to-cart {
+    background-color: #e76f42;
+    color: white;
+    border: none;
+    padding: 0.7rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.add-to-cart:hover {
+    background-color: #ff7f50;
+}
+
+
+
+/* Blog Header */
+#blog-header {
+    text-align: center;
+    padding: 2rem 0;
+}
+
+#blog-header h2 {
+    font-size: 2.5rem;
+    color: #05244c;
+    margin-bottom: 1rem;
+}
+
+.blog-categories {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.blog-categories .category {
+    background-color: #e0f7fa;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 1rem;
+    color: #05244c;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.blog-categories .category.active {
+    background-color: #80deea;
+    color: #fff;
+}
+
+.blog-categories .category:hover {
+    background-color: #b2ebf2;
+}
+
+/* Blog List */
+#blog-list {
+    padding: 2rem;
+}
+
+.blog-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.blog-card {
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.blog-card:hover {
+    transform: translateY(-5px);
+}
+
+.blog-card img {
+    max-width: 100%;
+    height: auto;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+.blog-card .blog-content {
+    padding: 1rem;
+}
+
+.blog-card h3 {
+    font-size: 1.2rem;
+    color: #05244c;
+    margin-bottom: 0.5rem;
+}
+
+.blog-card p {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* General Section Styling */
+#community,
+#final-thoughts {
+    padding: 2rem;
+    text-align: center;
+    background-color: #f9f9f9;
+    margin: 2rem 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Community Section Styling */
+.community-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.community-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.community-item {
+    padding: 1rem;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.community-item h4 {
+    font-size: 1.2rem;
+    color: #05244c;
+    margin-bottom: 0.5rem;
+}
+
+.community-item p {
+    font-size: 0.95rem;
+    color: #555;
+}
+
+/* Final Thoughts Section Styling */
+.final-thoughts-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.final-thoughts-container h3 {
+    font-size: 1.8rem;
+    color: #05244c;
+    margin-bottom: 1rem;
+}
+
+.final-thoughts-container p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.5;
+}
+
+
+
+/* Tips Header Section */
+#tips-header {
+    text-align: center;
+    padding: 2rem;
+    background: #f0f8ff;
+    margin-bottom: 2rem;
+}
+
+#tips-header h2 {
+    font-size: 2.5rem;
+    color: #05244c;
+}
+
+#tips-header p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Tips Section */
+#tips-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.tip {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding: 1rem;
+    border-radius: 10px;
+    background: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 2rem;
+}
+
+.tip:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.tip:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Tip Images */
+.tip-image {
+    flex: 1;
+    max-width: 40%;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.tip:hover .tip-image {
+    transform: scale(1.05);
+}
+
+/* Tip Text */
+.tip-text {
+    flex: 2;
+}
+
+.tip-text h3 {
+    font-size: 1.8rem;
+    color: #05244c;
+    margin-bottom: 1rem;
+    transition: color 0.3s ease;
+}
+
+.tip:hover .tip-text h3 {
+    color: #0073e6;
+}
+
+.tip-text p,
+.tip-text ol {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Tip Tables */
+.tip table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+.tip table th,
+.tip table td {
+    border: 1px solid #ddd;
+    padding: 0.5rem;
+    text-align: left;
+}
+
+.tip table th {
+    background: #05244c;
+    color: #fff;
+}
+
+.tip table td {
+    background: #f9f9f9;
+}
+
+
+
+
+
+/* Footer Container */
+footer {
+    background-color: #05244c;
+    /* Navy background color */
+    color: white;
+    padding: 2rem;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* Footer Subscription Section */
+.footer-subscription {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.footer-subscription h3 {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.footer-subscription form {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.footer-subscription input {
+    padding: 0.8rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    width: 300px;
+}
+
+.footer-subscription button {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    background-color: #e76f42;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.footer-subscription button:hover {
+    background-color: #ff7f50;
+}
+
+/* Footer Links Section */
+.footer-links {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.footer-column h4 {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-column ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-column ul li a:hover {
+    color: #ff7f50;
+}
+
+/* Social Media Section */
+.social-media .social-icons {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-media .social-icons a img {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s;
+}
+
+.social-media .social-icons a img:hover {
+    transform: scale(1.2);
+}
+
+/* Footer Bottom Section */
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding-top: 1rem;
+}
+
+.footer-bottom ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding: 0;
+    margin: 0.5rem 0 0;
+}
+
+.footer-bottom ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.8rem;
+}
+
+.footer-bottom ul li a:hover {
+    color: #ff7f50;
+}
+
+/* Mobile-First Responsive Design */
+
+/* General Reset for Smaller Screens */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+        line-height: 1.4;
+    }
+
+    /* Header */
+    header {
+        flex-direction: column;
+        text-align: center;
+        padding: 0.5rem 0;
+    }
+
+    header h1 {
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    /* Hero Section */
+    #hero {
+        flex-direction: column;
+        padding: 2rem 1rem;
+    }
+
+    .hero-text {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .hero-text h2 {
+        font-size: 2rem;
+    }
+
+    .hero-text p {
+        font-size: 1rem;
+    }
+
+    .hero-image img {
+        padding: 0.5rem;
+    }
+
+    /* Features Section */
+    .feature {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    .feature img {
+        max-width: 80%;
+    }
+
+    /* Product Cards */
+    .product-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product-card {
+        width: 90%;
+    }
+
+    /* Blog Section */
+    .blog-container {
+        flex-direction: column;
+    }
+
+    .blog-card {
+        width: 90%;
+    }
+
+    /* Footer */
+    .footer-links {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-column {
+        margin-bottom: 1rem;
+    }
+
+    .footer-subscription input {
+        width: 90%;
+    }
+
+    .footer-bottom ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
+
+/* Very Small Screens (max-width: 480px) */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1rem;
+    }
+
+    .hero-text h2 {
+        font-size: 1.5rem;
+    }
+
+    .hero-text p {
+        font-size: 0.9rem;
+    }
+
+    .product-card h3 {
+        font-size: 1.2rem;
+    }
+
+    .product-card p {
+        font-size: 0.9rem;
+    }
+
+    .btn {
+        font-size: 1rem;
+        padding: 0.5rem 1rem;
+    }
+
+    footer {
+        padding: 1rem;
+    }
+
+    .footer-subscription h3 {
+        font-size: 1rem;
+    }
+}
